@@ -1,0 +1,16 @@
+def sum_digits(num):
+    num = abs(num)  # handle negative numbers
+    total = 0
+    
+    while num > 0:
+        digit = num % 10      # extract last digit
+        total += digit        # add to sum
+        num = num // 10       # remove last digit
+    
+    return total
+
+
+# Example usage
+n = int(input("Enter number: "))
+result = sum_digits(n)
+print(f"Sum of digits of given number {n} is {result}")
